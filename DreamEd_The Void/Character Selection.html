@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="Character Selection.css">
+	<link rel="icon" href="thevoidicon.ico">
+	<script src="save and load.js" defer></script>
+</head>
+
+<body>
+
+<script>
+function openNav() {
+  document.getElementById("navsidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("navsidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+
+
+
+<!--Sidebar-->
+<div class="sidebar" id="navsidebar">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="The Void.html">Home</a>
+</div>
+
+<div id="sidemenu">
+  <button class="openbtn" onclick="openNav()">☰</button>  
+</div>
+
+<div class="fadein">
+<h1>Select a character to continue</h1>
+<br>
+<div class="row">
+	<div class="column">
+		<a href="J.Chapter 2.html">
+		<img src="Jaz_600.png" style="width:100%">
+		<div class="charactername">
+		<div class="glow"> Jaz </div>
+		</div>
+		</a>
+	</div>
+	<div class="column">
+		<a href="E.Chapter 2.html">
+		<img src="Ezri_600x849.PNG" style="width:100%">
+		<div class="charactername"> 
+		<div class="glow"> Ezri </div>
+		</div>
+		</a>
+	</div>
+	<div class="column">
+		<a href="N.Chapter 2.html">
+		<img src="Nex_600.PNG" style="width:100%">
+		<div class="charactername"> 
+		<div class="glow"> Nex </div>
+		</div>
+		</a>
+	</div>
+</div>
+</div>
+
+<br>
+<br>
+
+<!--Bottom Navigation Bar-->
+<div class="bottomnavbar">
+  <a class="active" href="The Void.html">Play</a>
+  <a id="savegame" onclick="saveGame()">Save</a>
+  <a id="loadgame" onclick="loadGame()">Load</a>
+  <a href="Characters.html">Characters</a>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+/* General CSS */
+body {
+	background-color: black;
+	color: white;
+	margin: 0;
+}
+
+h1 {
+	font-family: monospace;
+	font-style: oblique;
+	font-weight: light;
+	letter-spacing: 4px;
+	word-spacing: 2px;
+	padding-bottom: 0px;
+	font-size: 28px;
+	text-align: center;
+}
+
+p {
+	font-family: monospace;
+	letter-spacing: 3px;
+	padding: 5px 0px;
+	font-size: 18px;
+}
+
+h2 {
+	font-family: monospace;
+	letter-spacing: 3px;
+	padding: 5px;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.charactername {
+	font-family: arial;
+	font-size: 16.5px;
+	letter-spacing: 3px;
+	margin: auto;
+	padding: 10px;
+	font-style: oblique;
+}
+
+a:hover {
+	color: white;
+	text-decoration: none;
+	opacity: 1;
+}
+
+a:link, a:visited, a:active {
+	text-align: center;
+	text-decoration: none;
+	color: white;
+}
+
+
+/*Images*/
+* {
+	box-sizing: border-box;
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	padding-bottom: 20px;
+	opacity: 0.5;
+	transition: 0.5s ease;
+}
+
+img:hover {
+	opacity: 1;
+}
+
+.column {
+	float: left;
+	width: 33.33%;
+	padding: 0px 20px 30px;
+	text-align: center;
+	border: solid black 20px;		
+}
+
+.row {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+
+.charactercard:hover .characterinfo {
+	display: unset;
+}
+
+.characterinfo {
+  color: #cccccc;
+  font-size: 14px;
+  padding: 25px;
+  font-family: arial;
+  letter-spacing: 1.5px;
+  display: none;
+}
+
+
+/*Fade-In Effect*/
+
+.fadein {
+	animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+
+/* Start Buttons CSS */
+
+.button {
+	background-color: black;
+	color: white;
+	border: 1px solid black;
+	padding: 12px 25px;
+	text-align: center;
+	font-family: monospace;
+	font-size: 20px;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	border-radius: 4px;
+}
+
+.button:hover {
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.glow {
+	animation: glow 8s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 25px #fff, 0 0 35px #fff, 0 0 45px #fff, 0 0 55px #fff, 0 0 65px #fff;
+  }
+  
+  to {
+    text-shadow: 0 0 15px #fff, 0 0 25px #b30000, 0 0 35px #b30000, 0 0 45px #b30000, 0 0 55px #b30000, 0 0 65px #b30000, 0 0 75px #b30000;
+  }
+}
+
+
+/* Bottom Nav Bar CSS */
+
+.bottomnavbar {
+	list-style-type: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+	background-color: black;
+	font-family: arial;
+	font-size: 12px;
+	font-weight: medium;
+	letter-spacing: 2px;
+	text-transform: lowercase;
+	position: fixed;
+	bottom: 0;
+}
+
+.bottomnavbar a {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	text-decoration: none;
+	width: 25%;
+}
+
+.bottomnavbar a:hover {
+	font-weight: bold;
+	letter-spacing: 3px;
+	cursor: pointer;
+}
+	
+.bottomnavbar a.active {
+	color: white;
+	font-weight: bold;
+	border-top: 1px solid white;
+}
+
+
+
+/*Sidebar CSS*/
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1a1a1a;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  font-family: arial;
+  font-size: 12px;
+  font-weight: medium;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sidebar a {
+  padding: 32px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  text-align: left;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#sidemenu {
+  transition: margin-left .5s;
+  padding: 12px;
+}
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="The Void.css">
+	<link rel="icon" href="thevoidicon.ico">
+  <script src="save and load.js" defer></script>
+</head>
+
+<script src="Chapter 2 Intro.js"></script>
+
+<body onload="showChapterTitle()">
+
+<!--Sidebar-->
+<div class="sidebar" id="navsidebar">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="The Void.html">Project Home</a>
+  <a href="https://web.microsoftstream.com/video/b514eb7c-ba6f-4755-9f35-9102d26718fc">Walkthrough</a>
+  <a href="Report.html">Report</a>
+  <a href="https://github.com/danielleteo/a3_uts_tut5/blob/main/README.md">About</a>
+</div>
+
+<div id="sidemenu">
+  <button class="openbtn" onclick="openNav()">☰</button>  
+</div>
+
+
+<!--Prologue Title-->
+<div class="center">
+<div class="fadeintext">
+<h1><div id="ChapterTitle"> chapter 2 </div></h1>
+</div>
+<div id="ChapterSubtitle"> <p id="chaptersubtitle"></p> </div>
+</div>
+
+<!--Begin Button-->
+<div class="center">
+	<button class="button">
+	<div id="StartChapter">
+		<a href="Character Selection.html"> 
+		<div class="fadeintext"> <div class="glow"> Begin </div> </div>
+		</a>
+	</button>
+	</div>
+</div>
+
+
+<!--Bottom Navigation Bar-->
+<div class="bottomnavbar">
+  <a class="active" href="The Void.html">Play</a>
+  <a id="savegame" onclick="saveGame()">Save</a>
+  <a id="loadgame" onclick="loadGame()">Load</a>
+  <a href="#">Stats</a>
+  <a href="Characters.html">Characters</a>
+</div>
+
+
+</body>
+</html>

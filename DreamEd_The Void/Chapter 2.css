@@ -1,0 +1,434 @@
+/* General CSS */
+body {
+	background-color: black;
+	color: white;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.backgroundimg {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.backgroundimg::before {
+	content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('The\ Void\ Background.png');
+    background-size: cover;
+    background-position: center;
+	background-repeat: no-repeat;
+    opacity: 0; /* Start fully transparent */
+	animation: fadeIn 1s ease-in-out forwards;
+}
+
+.content {
+	position: relative;
+	z-index: 1; /* Ensure content is above the pseudo-element */
+	text-align: center;
+}
+
+
+h1 {
+	font-family: monospace;
+	font-style: oblique;
+	font-weight: light;
+	letter-spacing: 4px;
+	padding-bottom: 8px;
+	font-size: 28px;
+}
+
+p {
+	font-family: monospace;
+	letter-spacing: 3px;
+	padding: 5px 0px;
+	font-size: 18px;
+}
+
+h2 {
+	font-family: monospace;
+	letter-spacing: 3px;
+	padding: 5px;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.maintext {
+	font-family: arial;
+	font-size: 14px;
+	letter-spacing: 1.5px;
+	margin: 0px 250px;
+	text-align: left;
+	padding-top: 10px;
+	line-height: 1.5;
+}
+
+.text {
+	font-family: arial;
+	font-size: 16px;
+	letter-spacing: 2px;
+	margin: auto;
+	padding: 10px;
+}
+
+
+.txtmsg {
+	font-family: monospace;
+	font-size: 15px;
+	letter-spacing: 2px;
+	padding-top: 10px;
+	line-height: 1.5;
+	font-style: oblique;
+}
+
+.choice {
+	background-color: #1a1a1a;
+	border: 0.2px solid #595959;
+	border-radius: 4px;
+	font-size: 14px;
+	font-style: bold;
+	padding: 10px;
+	text-align: center;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+
+img {
+	display: inline;
+	width: 285px;
+	height: 410px;
+	bottom:0;
+	left:0;
+	position: fixed;
+	z-index: -1;
+}
+
+.center {
+	margin: auto;
+	width: 100%;
+	padding: 20px 0;
+	text-align: center;
+}
+
+a:hover {
+	color: white;
+	text-decoration: none;
+	opacity: 1;
+}
+
+a:link, a:visited, a:active {
+	text-align: center;
+	text-decoration: none;
+	color: white;
+}
+
+
+/*Fade-In Text*/
+
+.fadeintext {
+	animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+
+/* Start Buttons CSS */
+
+.button {
+	background-color: black;
+	color: white;
+	border: 1px solid black;
+	padding: 12px 25px;
+	text-align: center;
+	font-family: monospace;
+	font-size: 20px;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	border-radius: 4px;
+}
+
+.button:hover {
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.glow {
+	animation: glow 8s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 25px #fff, 0 0 35px #fff, 0 0 45px #fff, 0 0 55px #fff, 0 0 65px #fff;
+  }
+  
+  to {
+    text-shadow: 0 0 15px #fff, 0 0 25px #b30000, 0 0 35px #b30000, 0 0 45px #b30000, 0 0 55px #b30000, 0 0 65px #b30000, 0 0 75px #b30000;
+  }
+}
+
+
+/*Specific Animations*/
+
+#StartPrologue {
+	display: none;
+}
+
+#PrologueHeader {
+	display: none;
+}
+
+#NoMemory {
+	display: none;
+}
+
+#thevoiddoesnotforget {
+	font-family: arial;
+	font-size: 14px;
+	letter-spacing: 2px;
+	margin: auto;
+	text-align: left;
+	padding-top: 10px;
+	color: #b30000;
+}
+
+#StartChapter {
+	display: none;
+}
+
+#ChapterTitle {
+	display: none;
+}
+
+
+/* Next Button CSS */
+
+.nextbutton {
+	background-color: black;
+	color: white;
+	border: 1px solid #595959;
+	padding: 5px 25px;
+	text-align: right;
+	font-family: monospace;
+	font-size: 20px;
+	visibility: visible;
+	text-decoration: none;
+	border-radius: 4px;
+	animation: fadeIn 5s;
+	cursor: pointer;
+}
+
+.nextbutton:hover {
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.right {
+	margin: auto;
+	width: 100%;
+	padding: 30px 120px 40px;
+	text-align: right;
+}
+
+#NextButton {
+	visibility: hidden;
+}
+
+
+/* Top Nav Bar CSS */	
+
+* {box-sizing: border-box} /*applies to both top and bottom nav*/
+
+.topnavbar {
+	list-style-type: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+	background-color: #1a1a1a;
+	font-family: arial;
+	font-size: 12px;
+	font-weight: medium;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+.topnavbar a {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	text-decoration: none;
+	width: 25%;
+}
+
+.topnavbar a:hover {
+	background-color: #111;
+	letter-spacing: 4px;
+}
+	
+.topnavbar a.active {
+	color: #b30000;
+	font-weight: bold;
+}
+
+
+/* Bottom Nav Bar CSS */
+
+.bottomnavbar {
+	list-style-type: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+	background-color: black;
+	font-family: arial;
+	font-size: 12px;
+	font-weight: medium;
+	letter-spacing: 2px;
+	text-transform: lowercase;
+	position: fixed;
+	bottom: 0;
+	z-index: 1;
+}
+
+.bottomnavbar a {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	text-decoration: none;
+	width: 25%;
+}
+
+.bottomnavbar a:hover {
+	font-weight: bold;
+	letter-spacing: 3px;
+	cursor: pointer;
+}
+	
+.bottomnavbar a.active {
+	color: white;
+	font-weight: bold;
+	border-top: 1px solid white;
+}
+
+
+/*Sidebar CSS*/
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #1a1a1a;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  font-family: arial;
+  font-size: 12px;
+  font-weight: medium;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sidebar a {
+  padding-left: 32px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  text-align: left;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#sidemenu {
+  transition: margin-left .5s;
+  padding: 6px 15px;
+}
+
+
+/*Card Generator*/
+.card {  
+  position: relative;
+  width: 105px;
+  height: 150px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+}
+
+.card-value-suit {
+  display: inline-block;
+  position: absolute;
+}
+.card-value-suit.top {
+  top: 5px;
+  left: 5px;
+}
+.card-value-suit.bot {
+  transform: rotate(180deg);
+  bottom: 5px;
+  right: 5px;
+}
+.card-suit {
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25%;
+}
+
+.card.spades,
+.card.clubs {
+  color: black;
+}
+.card.hearts,
+.card.diamonds {
+  color: red;
+}
